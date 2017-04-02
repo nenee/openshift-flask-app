@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+    {% block title %}Embed Demo{% endblock %}
+    {% block content %}
+    {{ js_resources|indent(4)|safe }}
+
+    {{ css_resources|indent(4)|safe }}
+
+    {{ plot_script|indent(4)|safe }}
+
+    <!-- A simple form for changing the graph -->
+    <p> Select your settings: </p>
+
+    <form name="color_button" method='GET'>
+        Color:
+            <select class="browser-default" name="color">
+                <option value="Red"{{ "selected" if color|indent(4)|safe == "Red" }}>Red</option>
+                <option value="Green"{{ "selected" if color|indent(4)|safe == "Green" }}>Green</option>
+                <option value="Blue"{{ "selected" if color|indent(4)|safe == "Blue" }}>Blue</option>
+                <option value="Black"{{ "selected" if color|indent(4)|safe == "Black" }}>Black</option>
+            </select>
+        </div>
+        <br>
+        From:
+        <input type="text" name="_from" value="{{ _from }}">
+        <br>
+        To:
+        <input type="text" name="to" value="{{ to }}">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    {{ plot_div|indent(4)|safe }}
+    <p> Demonstrates some very simple embedding into a webpage</p>
+{% endblock %}
+<select class="browser-default">
