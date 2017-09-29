@@ -1,6 +1,6 @@
 FlaskApp for Cloud CWK #2
 ==================
-Source code for the app deployed on OpenShift.
+Source code for an app deployed on OpenShift.
 ----------------------------
 
 ### Includes :
@@ -8,5 +8,7 @@ Source code for the app deployed on OpenShift.
 - Emotion API that returns an emoji based on the status you've entered.
 - An example of visualization - via bokeh library.
 - Google Graph displaying Stock Exchange Rates.
+- App design made with Materialize.
+
 
 ![Alt text](/../screens/1.png?raw=true "screen1")
